@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev --open",
     "build": "vite build",
+    "build-prod": "vite build --base=/jon/",
     "preview": "vite preview"
   },
   "dependencies": {
