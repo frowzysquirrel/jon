@@ -1,5 +1,6 @@
 <template>
   <main>
+    <span class="prompt">{{ prompts[activeTab] }}...</span>
     <div class="questions">
       <div
         class="group"
@@ -50,6 +51,16 @@ const nextTab = () => {
   activeTab.value = activeTab.value < 6 ? activeTab.value + 1 : 6;
 };
 
+const prompts = [
+  'is jon sandman',
+  'how jon sandman',
+  'who jon sandman',
+  'why jon sandman',
+  'where jon sandman',
+  'what jon sandman',
+  'when jon sandman',
+];
+
 const questions = ref([
   [
     ['is', 'jon sandman', 'in spacestation gaming'],
@@ -90,16 +101,26 @@ main {
   background-repeat: no-repeat;
   background-position: center 50px;
   background-size: 600px;
-  width: 768px;
   min-height: 100vh;
+  min-width: 600px;
+  position: relative;
 }
 
 .questions {
-  padding-top: 250px;
+  padding-left: 70px;
+  padding-top: 230px;
 }
 
 p {
   font-size: 26px;
+  text-align: left;
+}
+
+.prompt {
+  position: absolute;
+  top: 187px;
+  font-size: 26px;
+  left: 70px;
 }
 
 .tag {
