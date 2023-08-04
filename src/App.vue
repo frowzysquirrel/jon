@@ -21,8 +21,11 @@
       </div>
     </div>
     <br />
-    <button @click="previousTab()">Previous</button>&nbsp;&nbsp;&nbsp;
-    <button @click="nextTab()">Next</button>
+    <button v-if="activeTab > 0" @click="previousTab()">Prev</button>
+    &nbsp;&nbsp;
+    {{ activeTab + 1 }} / {{ questions.length }}
+    &nbsp;&nbsp;
+    <button v-if="activeTab < 6" @click="nextTab()">Next</button>
   </main>
 </template>
 
