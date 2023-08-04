@@ -133,8 +133,8 @@ p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 32px;
+    width: 105%;
+    height: 42px;
     background-color: #666;
   }
 }
